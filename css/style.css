@@ -1,77 +1,67 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
 }
 
 body {
-  background-color: #333;
-  display: flex;
+  margin: 0;
+  padding: 0;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(6, 157, 0) 50%, rgb(0, 0, 0) 100%);
+}
+
+.calculator {
+  margin: 125px;
+  display: grid;
   justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 400px;
-  height: 600px;
-  background-color: #3b49cc;
-  border-radius: 25px;
-}
-
-h1 {
-  position: absolute;
-  top: 5%;
-  text-align: center;
-  font-size: 50px;
-}
-
-.screen {
-  position: absolute;
-  top: 15%;
-  width: 400px;
-  height: 65px;
-  text-align: center;
-  border-radius: 25px;
-  background-color: #a19353;
+  align-content: center;
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 80px);
 }
 
 .score {
-  font-size: 50px;
+  grid-column: 1/-1;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: 0px 4px 25px -10px rgba(0, 0, 0, 0.75);
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.keyboard {
-  display: flex;
-  width: 350px;
-  height: 400px;
+.prev-action {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.digits {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  margin-bottom: 10px;
+.curr-action {
+  font-size: 30px;
 }
 
 .btn {
-  width: 85px;
-  height: 75px;
-  font-size: 30px;
+  cursor: pointer;
+  border: 1px solid #333;
+  background: #292929;
+  outline: none;
 }
 
-.dot {
-  margin-bottom: 10px;
-  font-size: 30px;
+.btn:hover,
+.btn:focus {
+  background: rgba(36, 36, 35, 0.95);
 }
 
-.scorebtn {
-  background-color: #b42bb4;
+.column2 {
+  grid-column: span 2;
+}
+
+.row2 {
+  grid-row: span 2;
 }/*# sourceMappingURL=style.css.map */
